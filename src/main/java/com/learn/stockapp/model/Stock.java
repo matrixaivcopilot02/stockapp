@@ -25,6 +25,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import jakarta.persistence.Column;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 @Entity
 @Table(name = "stocks")
@@ -46,6 +47,7 @@ public class Stock {
     @Column(name = "exchange")
     private String exchange;
 
+    @JsonProperty("mic_code")
     @Column(name = "mic_code")
     private String micCode;
 
@@ -57,4 +59,4 @@ public class Stock {
 }
 
 
- 
+
